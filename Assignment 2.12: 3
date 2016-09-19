@@ -1,0 +1,18 @@
+import numpy as np
+a = (2 + np.e**(2.8))/(13**0.5 - 2)
+b = (1 -((1 + np.log(2))**-3.5)/(1+(5**0.5)))
+c = np.sin((2-(2**.5))/(2+(2**.5)))
+print("Enter 'a', 'b', or 'c', to see the output of said equation.")
+while True:
+   see = str(raw_input())
+   if see == str("a"):
+      print(a)
+      print("Enter another letter if you wish to try again.")
+   elif see == str("b"):
+      print(b)
+      print("Enter another letter if you wish to try again.")
+   elif see == str("c"):
+      print(c)
+      print("Enter another letter if you wish to try again.")
+   else:
+      print("That is not 'a', 'b', or 'c'. Try again.")
