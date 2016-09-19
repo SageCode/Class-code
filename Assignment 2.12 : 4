@@ -1,0 +1,35 @@
+import numpy as np
+print("Welcome to the fantastic quadratic formula genie!")
+repeat = 1
+while repeat == 1:
+    
+    print("Enter your values for a, b, and c that satisfy the equation:")
+    print("ax^2 + bx + c = 0")
+    a = input("a = ")
+    
+    b = input("b = ")
+    
+    c = input("c = ")
+    
+    if ((b**2)-4*a*c)<0:
+        a = a+0j
+        b = b+0j
+        c = c+0j
+    x = (-b + ((b**2)-4*a*c)**0.5)/(2*a)
+    y = (-b - ((b**2)-4*a*c)**0.5)/(2*a)
+    
+    print("Your two answers are:")
+    print("x = " +str(x) +", " +str(y))
+    ask = 1
+    print("Would you like to solve another equation? (y/n)")
+    while ask == 1:
+        rep = str(raw_input())
+        ask = 0
+        if rep == ("y"):
+            repeat = 1
+        elif rep == ("n"):
+            print("Goodbye!")
+            repeat = 0
+        else:
+            print("Please enter either 'y' or 'n'.")
+            ask = 1
