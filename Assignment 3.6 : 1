@@ -1,0 +1,41 @@
+import numpy as np
+loop = 1
+r = np.arange(0,30,29.0/8.0)
+print(str("The starting array is as follows:"))
+print(r)
+while loop == 1:
+    print("type 's' to see the square of the array, type 'd' to see the values in the array x2")
+    print("or type 'quit' to leave.")
+    see = str(raw_input("see: "))
+    if see == str("s"):
+        b = []
+        for i in r:
+            i *= i
+            b.append(i) 
+        print b
+    elif see == str("d"):
+        run = 1
+        while run == 1:
+            print("would you like to see this done by addition or multiplication? (m/a)")
+            a = raw_input()
+            if a == str("m"):
+            #Multiplication method
+                print(2*r)
+                print("This was achieved by multiplication.")
+                break
+            if a == str("a"):
+            #addition method
+                b = []
+                for i in r:
+                    i += i
+                    b.append(i)
+                print b
+                print("This was achieved by addition.")
+                break
+            else:
+                print("I don't recognize that command.") 
+    elif see == str("quit"):
+        print("Bye!")
+        break
+    else:
+        print("Please enter either 's', 'd', or 'quit'.")
