@@ -1,0 +1,41 @@
+import numpy as np
+#100 'e's
+ar1 = np.zeros(100)
+ar1 += np.e
+#0-306
+ar2 = np.arange(0,361, 1)
+#0-2pi
+ar3 = ar2 * (np.pi/180)
+#0-17
+ar4 = np.arange(0,17,0.2)
+#0-a7, inclusive
+ar5 = np.arange(0,17.1,0.2)
+while True:
+    print("type 'a','b','c','d', or 'e' to see one of the following, or type 'ex' to exit.")
+    print("(a) an array of 100 elements all equal to e, the base of the natural logarithm")
+    print("(b) an array in 1-degree increments of all the angles in degrees from 0 to 360 degrees")
+    print("(c) an array in 1-degree increments of all the angles in radians from 0 to 360 degrees")
+    print("(d) an array from 12 to 17, not including 17, in 0.2 increments")
+    print("(e) an array from 12 to 17, including 17, in 0.2 increments")
+    see = raw_input()
+    if see == str("a"):
+        print ar1
+        print (" ")
+    elif see == str("b"):
+        print ar2
+        print (" ")
+    elif see == str("c"):
+        print ar3
+        print (" ")
+    elif see == str("d"):
+        print ar4
+        print (" ")
+    elif see == str("e"):
+        print ar5
+        print (" ")
+    elif see == str("ex"):
+        break
+    else:
+        print("That is not a valid input. If you wish to exit, type 'ex'")
+        print (" ")
+        
